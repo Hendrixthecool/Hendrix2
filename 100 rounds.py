@@ -1,13 +1,12 @@
 # author: Hendrixthecool
-switch = 
-Round = 0
+switch = "off"
+Round = range(1, 101)
 people = range(1, 101)
-while Round < 100:
-	if people % Round == 0:
-		if switch == True:
-			switch = False
-			switch = switch + 1
-		if switch == False:
-			switch = True
-			switch = switch + 1
+for noobs in Round:
+	for p in people:
+		if p % noobs == 0:
+			if switch == "on":
+				switch = "off"
+			elif switch == "off":
+				switch = "on"
 print str (switch)
